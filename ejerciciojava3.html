@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+</head>
+<body>
+    <script>
+        function convertir(){
+            var celsius = parseFloat(document.getElementById("celsius").value);
+            var fahrenheit = celsius * 9/5 + 32;
+            document.getElementById("resultado").innerHTML = celsius + " grados Celsius son " + fahrenheit + " grados Fahrenheit.";
+        }
+
+    </script>
+    <label for="celsius">Grados Celsius:</label>
+    <input type="text" id="celsius" placeholder="Ingrese grados Celsius">
+
+    <button onclick="convertir()">Convertir</button>
+
+    <p id="resultado"></p>
+    
+</body>
+</html>
