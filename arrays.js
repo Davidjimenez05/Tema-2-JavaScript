@@ -1,7 +1,7 @@
 let miArray = [];
     
       function actualizarResultado() {
-        document.getElementById('resultado').innerHTML = 'Array actual: [' + miArray.join(', ') + ']';
+        document.getElementById('resultado').innerHTML = '[' + miArray.join(', ') + ']';
       }
     
       function agregarElemento() {
@@ -39,7 +39,7 @@ let miArray = [];
         const elementoBuscar = document.getElementById('elementoBuscar').value;
         const index = miArray.indexOf(elementoBuscar);
         if (index !== -1) {
-          document.getElementById('resultado').innerHTML = 'Elemento encontrado en la posición ' + index;
+          document.getElementById('resultado').innerHTML = 'Elemento encontrado en la posición ';
         } else {
           document.getElementById('resultado').innerHTML = 'Elemento no encontrado';
         }
