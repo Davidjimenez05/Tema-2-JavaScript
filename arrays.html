@@ -4,20 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arrays</title>
-    <style>
-        body {
-          font-family: Arial, sans-serif;
-          text-align: center;
-          margin: 20px;
-        }
-        button {
-          margin: 5px;
-        }
-      </style>
+    <script src="arrays.js"></script>
     </head>
     <body>
     
-    <h1>Manipulación de Array</h1>
+    <h1>Lenguaje de Marcas</h1>
     
     <button onclick="agregarElemento()">Añadir Elemento</button>
     <input type="text" id="nuevoElemento" placeholder="Nuevo Elemento">
@@ -32,55 +23,6 @@
     <input type="text" id="elementoBuscar" placeholder="Elemento a Buscar">
     
     <p id="resultado"></p>
-    
-    <script>
-      let miArray = [];
-    
-      function actualizarResultado() {
-        document.getElementById('resultado').innerHTML = 'Array actual: [' + miArray.join(', ') + ']';
-      }
-    
-      function agregarElemento() {
-        const nuevoElemento = document.getElementById('nuevoElemento').value;
-        miArray.push(nuevoElemento);
-        actualizarResultado();
-      }
-    
-      function eliminarElemento() {
-        const elementoEliminar = document.getElementById('elementoEliminar').value;
-        const index = miArray.indexOf(elementoEliminar);
-        if (index !== -1) {
-          miArray.splice(index, 1);
-          actualizarResultado();
-        } else {
-          alert('Elemento no encontrado');
-        }
-      }
-    
-      function ordenarCreciente() {
-        miArray.sort(function(a, b) {
-          return a - b;
-        });
-        actualizarResultado();
-      }
-    
-      function ordenarDecreciente() {
-        miArray.sort(function(a, b) {
-          return b - a;
-        });
-        actualizarResultado();
-      }
-    
-      function buscarElemento() {
-        const elementoBuscar = document.getElementById('elementoBuscar').value;
-        const index = miArray.indexOf(elementoBuscar);
-        if (index !== -1) {
-          document.getElementById('resultado').innerHTML = 'Elemento encontrado en la posición ' + index;
-        } else {
-          document.getElementById('resultado').innerHTML = 'Elemento no encontrado';
-        }
-      }
-    </script>
     
 </body>
 </html>
