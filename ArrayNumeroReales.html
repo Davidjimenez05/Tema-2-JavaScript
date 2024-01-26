@@ -1,0 +1,30 @@
+<!--Realiza un script que permita introducir numeros reales en un array. 
+El script dispondra de dos botones Sumar y Multiplicar si el usuario pulsa
+sumar nuestro script mostrara el  total de la suma de todos sus elementos mientras que si pulsa
+Multiplicar mostrara el producto 
+
+Ejemplo: var numeros=[];
+Si añado el 4 quedaria en pantalla así:
+1,2,3,4
+Si pulso Sumar mostraria:
+10
+Si pulso Multiplicar mostraría:
+24 -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones con numeros reales</title>
+    <script src="ArraysNumeroReales.js"></script>
+</head>
+<body>
+    <h1>Introducir numeros en el Arrays</h1>
+    <input type="number" placeholder="Añadir numero" id="n">
+    <button onclick="add()">Añadir numero</button>
+    <button onclick="suma()">Sumar</button>
+    <button onclick="multi()">Multiplicar</button>
+    <p id="mostrar"></p>
+</body>
+</html>
