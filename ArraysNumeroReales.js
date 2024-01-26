@@ -10,7 +10,7 @@ function add() {
 var s = 0
 
 function suma() {
-    var s = 0
+    var s = 0;
     for (var i = 0 ; i< Numeros.length; i++) {
         s += Numeros[i];
     }
