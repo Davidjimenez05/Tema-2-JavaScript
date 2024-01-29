@@ -1,5 +1,5 @@
 /*
-Versión Cutre
+Versión Cutre sisisis
 function ocultarRojo(){
     document.getElementById("rojo").style.visibility = "hidden";
 }
