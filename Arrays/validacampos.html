@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formaulario</title>
+    <script src="validar.js"></script>
+    <style>
+        .error{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+      <label for="">Nombre:</label> <span class="error" id="campo1"> <input type="text" id="nombre"></span>
+      <label for="">Apellidos:</label><span class="error" id="campo2"><input type="text" id="apellido"></span>
+      <label for="">Email:</label><span class="error" id="campo3"><input type="email" id="email"></span>
+      <label for="">Contraseña:</label><span class="error" id="campo4"><input type="password" name="" id="password"></span>
+      <label for="">Acepta politica privacidad</label><span class="error" id="campo5"><input type="checkbox" id="verificacion"></span>
+      <button onclick="validar(document.getElementsByTagName('input'))">validar</button></span>
+</body>
+</html>
