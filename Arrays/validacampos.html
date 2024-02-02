@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formaulario</title>
+    <title>Formulario</title>
     <script src="validar.js"></script>
     <style>
         .error{
-            color: red;
+            color:red;
         }
-
     </style>
 </head>
 <body>
-      <label for="">Nombre:</label> <span class="error" id="campo1"> <input type="text" id="nombre"></span>
-      <label for="">Apellidos:</label><span class="error" id="campo2"><input type="text" id="apellido"></span>
-      <label for="">Email:</label><span class="error" id="campo3"><input type="email" id="email"></span>
-      <label for="">Contraseña:</label><span class="error" id="campo4"><input type="password" name="" id="password"></span>
-      <label for="">Acepta politica privacidad</label><span class="error" id="campo5"><input type="checkbox" id="verificacion"></span>
-      <button onclick="validar(document.getElementsByTagName('input'))">validar</button></span>
+    
+        <label for="">Nombre:</label><input id="nombre" type="text"><span class="error" id="campo1"></span><br><br>
+        <label for="">Apellidos:</label><input id="apellidos" type="text"><span class="error" id="campo2"></span><br><br>
+        <label for="">Email:</label><input id="email" type="email"><span class="error" id="campo3"></span><br><br>
+        <label for="">Contraseña:</label><input id="password" type="password" name="" id=""><span class="error" id="campo4"></span><br><br>
+        <label for="">Confirma Contraseña:</label><input id="password2" type="password" name="" id=""><span class="error" id="campo5"></span><br><br>
+        <label for="">DNI:</label><input id="dni" type="text" name="" id=""><span class="error" id="campo6"></span><br><br>
+        <label for="">Acepta política privacidad</label><input id="verificacion" type="checkbox" value="off"><span class="error" id="campo7"></span><br><br>
+        <button onclick="validar(document.getElementsByTagName('input'))">Validar</button>
 </body>
 </html>
