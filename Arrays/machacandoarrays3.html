@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificaicones</title>
+</head>
+<body>
+    <h1>Calificaciones de Horse Luis (by Mr Tartaria empirico)</h1>
+    <input type="number" name="" id="numero" min="0" max="10">
+    <button onclick="enviar()">Enviar</button>
+    <button onclick="borrar()">Borrar</button>
+    <button onclick="media()">Nota media</button>
+    <p id="resultado"></p>
+    <script>
+        let Calificaciones = [];
+
+        function enviar() {
+            const input = document.getElementById("numero");
+            const calificacion = parseInt(input.value);
+
+            if (calificacion >= 0 && calificacion <= 10) {
+                calificaciones.push(calificacion);
+                input.value = "";
+                mostrarCalificaciones();
+        }
+        else {
+                alert("La calificación debe estar entre 0 y 10");
+            }
+        }
+
+        function mostrarCalificaciones() {
+            const calificacionesP = document.getElementById("resultado");
+            calificacionesP.textContent = "Calificaciones introducidas: " + calificaciones.join(", ");
+        }
+
+        function borrar() {
+            calificaciones = []; // Vaciar el array
+            mostrarCalificaciones();
+            mostrarResultado("Calificaciones borradas");
+        }
+
+        function media() {
+            if (calificaciones.length === 0) {
+                mostrarResultado("No hay calificaciones para calcular la media");
+                return;
+            }
+
+            const suma = calificaciones.reduce((total, calificacion) => total + calificacion, 0);
+            const media = suma / calificaciones.length;
+            mostrarResultado(`La nota media es: ${media.toFixed(2)}`);
+        }
+
+        function mostrarResultado(mensaje) {
+            const resultado = document.getElementById("resultado");
+            resultado.textContent = mensaje;
+        }
+    </script>
+</body>
+</html>
