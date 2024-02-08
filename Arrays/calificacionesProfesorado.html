@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de calificaciones</title>
+    <style>
+        #aviso{
+            color: red;
+        }
+    </style>
+    <script src="calificacionesProfesorado.js"></script>
+</head>
+<body>
+    <h1>Clasificaciones de Micky Mouse Empírico</h1>
+    <p>Escribe tus calificaciones y ve añadiendolas...</p>
+    <input type="text" name="" id="numero" placeholder="Calificacion">
+    <p id="aviso"></p>
+    <p id="notas"></p> <!--Aqui ire mostrando las calificaciones introducidas-->
+    <p id="resultado"></p><!--Aqui mostrare el resultado del calculo de medias-->
+    <button onclick="anadir()">Añadir calificacion</button>
+    <button onclick="borrar()">Borrar calificaciones</button>
+    <button onclick="calcularMedia()">calcular media</button>
+</body>
+</html>

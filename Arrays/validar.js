@@ -56,6 +56,12 @@ function validarDNI(){
         dniValido = false;
     return dniValido;
 }
+function limpia(){
+    let cadena = document.getElementById("cadena").value;
+    let cadenaSinEspacios = cadena.replace(/ /g,"");
+    let cadenaLimpia = cadenaSinEspacios.toUpperCase();
+    document.getElementById("resultado").innerHTML = cadenaLimpia;
+}
 
 // ¿Serías capaz de utilizar la etiqueta <form> ... </form> y que se vieran los mensajes sin 
 //enviar los datos al servidor cuando el formulario no estuviera correctamente relleno? 
