@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formaulario</title>
+    <title>Formulario</title>
     <script src="validar.js"></script>
     <style>
         .error{
-            color: red;
+            color:red;
         }
-
     </style>
 </head>
 <body>
-      <label for="">Nombre:</label> <span class="error" id="campo1"> <input type="text" id="nombre"></span>
-      <label for="">Apellidos:</label><span class="error" id="campo2"><input type="text" id="apellido"></span>
-      <label for="">Email:</label><span class="error" id="campo3"><input type="email" id="email"></span>
-      <label for="">Contraseña:</label><span class="error" id="campo4"><input type="password" name="" id="password"></span>
-      <label for="">Acepta politica privacidad</label><span class="error" id="campo5"><input type="checkbox" id="verificacion"></span>
-      <button onclick="validar(document.getElementsByTagName('input'))">validar</button></span>
+    
+        <label for="">Nombre:</label><input id="nombre" type="text"><span class="error" id="campo1"></span><br>
+        <label for="">Apellidos:</label><input id="apellidos" type="text"><span class="error" id="campo2"></span><br>
+        <label for="">Email:</label><input id="email" type="email"><span class="error" id="campo3"></span><br>
+        <label for="">Contraseña:</label><input id="password" type="password" name="" id=""><span class="error" id="campo4"></span><br>
+        <label for="">Acepta política privacidad</label><input id="verificacion" type="checkbox" value="off"><span class="error" id="campo5"></span><br>
+        <button onclick="validar(document.getElementsByTagName('input'))">Validar</button>
 </body>
 </html>
+<!--Un segundo campo de contraseña(¡que debe coincidir con el primero y tener longitud mínima de 8 caracteres!).
+Un campo DNI (que debe cumplir con los criterios para obtener 
+la letra del ejercicio planteado al final del documento javascript2.pdf).
+¿Serías capaz de utilizar la etiqueta <form> ... </form> y que se vieran los mensajes sin enviar 
+los datos al servidor cuando el formulario no estuviera correctamente relleno? Pista: 
+revisa cómo podemos modificar el comportamiento predeterminado de un formulario 
+(https://desarrolloweb.com/faq/explicaciones-detalladas-sobre-el-metodo-preventdefault-de-javascript). -->
