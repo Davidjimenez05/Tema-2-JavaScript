@@ -21,8 +21,11 @@ function hacerPregunta(){
     test=document.getElementById("examen");
     if(pos>=preguntas.length)
     {
-        test.innerHTML="<h2>Conseguiste acertar "+correctas+" de "+preguntas.length+" preguntas</h2>";document.getElementById("estado").innerHTML="Prueba completada";
-        pos=0;correctas=0;return false}document.getElementById("examen").innerHTML="Pregunta "+(pos+1)+" de "+preguntas.length;
+        test.innerHTML="<h2>Conseguiste acertar "+correctas+" de "+preguntas.length+" preguntas</h2>";
+        document.getElementById("estado").innerHTML="Prueba completada";
+        pos=0;correctas=0;return false
+    }
+        document.getElementById("examen").innerHTML="Pregunta "+(pos+1)+" de "+preguntas.length;
         pregunta=preguntas[pos][0];
         chA=preguntas[pos][1];
         chB=preguntas[pos][2];
@@ -34,7 +37,9 @@ function hacerPregunta(){
             opciones=document.getElementsByName("opciones");
             for(var i=0;i<opciones.length;i++){
                 if(opciones[i].checked){opcion=opciones[i].value}}
-                if(opcion==preguntas[pos][4]){correctas++}pos++;hacerPregunta()}
+
+                if(opcion==preguntas[pos][4]){correctas++}
+                pos++;hacerPregunta()}
                 window.addEventListener("load",hacerPregunta,false);
 </script>
 </head>
