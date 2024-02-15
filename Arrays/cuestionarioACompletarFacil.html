@@ -22,7 +22,7 @@ var preguntas = [
 
 function hacerPregunta(){
 	test = document.getElementById("examen"); /* Obtengo el div del examen */
-	if(pos>=preguntas.length){ /* ¿Cuando hemos llegado al final del cuestionario? La variable pos la comparo con algo */
+	if(pos==preguntas.length){ /* ¿Cuando hemos llegado al final del cuestionario? La variable pos la comparo con algo */
 		test.innerHTML = "<h2>Conseguiste acertar "+ correctas +" de "+ preguntas.length +" preguntas</h2>"; /* En correctas llevamos el contador de acertadas */
 		document.getElementById("estado").innerHTML = "Prueba completada"; /* En el estado decimos que hemos completado el cuestionario */
 		pos = 0;
