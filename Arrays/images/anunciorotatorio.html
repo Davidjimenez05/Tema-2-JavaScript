@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuncios rotatorios</title>
+</head>
+<body>
+    <h1>Anuncios rotatorios</h1>
+    <img src="banner0.png" id="fotoActual" onclick="pulsa()">
+    <script>
+        var fotos=new Array()
+        var indice=0;
+        fotos[0]="banner0.png";
+        fotos[1]="banner1.png";
+        fotos[2]="banner2.png";
+        fotos[3]="banner3.png";
+        fotos[4]="banner4.png";
+        fotos[5]="banner5.png";
+        function publicidad(){
+            const myTimeout = setTimeout (siguiente, 3000);
+        }
+
+        function siguiente(){
+            if (indice==fotos.length-1){
+                indice=0;
+            }
+            else{
+                indice=indice+1;
+            }
+            document.getElementById("fotoActual").src = "banner"+indice+".png";
+            publicidad();
+        }
+        function pulsa(){
+            if (indice == 0){
+                window.open("")
+            }
+            else if (indice == 1){
+                window.open("")
+            }
+            else if (indice == 2){
+                window.open("")
+            }
+            else if (indice == 3){
+                window.open("")
+            }
+            else if (indice == 4){
+                window.open("")
+            }
+            else if (indice == 5){
+                window.open("")
+            }
+        }
+        window.onload = publicdad();
+    </script>
+</body>
+</html>
