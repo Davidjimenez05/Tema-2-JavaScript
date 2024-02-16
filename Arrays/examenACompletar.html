@@ -21,7 +21,7 @@
     </tr>
   </table>
   <script type="text/javascript">
-      tamano=0; // TamaNo inicial
+      var tamano= 100; // TamaNo inicial
       function aumenta(){
         tamano+=25;
         document.getElementById("parrafo").style.fontSize = tamano+"%"; // aumentamos un 25% el tamaño
@@ -34,7 +34,7 @@
         document.getElementById("parrafo").style.color = document.getElementById("color").value; //Cambiamos el color del parrafo
       }
       function cambiarFuente(font) {
-        document.getElementById("parrafo").font.style = font.value; // Cambiamos la fuente del parrafo
+        document.getElementById("parrafo").style.fontFamily = font.value; // Cambiamos la fuente del parrafo
       }
 
   </script>
