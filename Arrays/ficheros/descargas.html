@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descarga</title>
+</head>
+<body onload="paco()">
+
+<ul id="ul">
+
+
+</ul>
+
+    <script>
+
+     function paco(){
+        //lee el contenido de ul
+        var contenido = document.getElementById("ul");
+        var paco2= new Array();
+        
+        for (var i = 1;  i <= 20; i++){
+            
+            paco2.push("fichero"+i+".pdf");
+
+            var lista = document.createElement("li");
+            var ruta = document.createElement("a"); 
+            lista.textContent="Descarga el pdf " + i;
+            ruta.setAttribute("href", paco2[i]);
+            lista.appendChild(ruta);
+            contenido.appendChild(lista);
+            
+        }
+
+    }
+    // window.onload = paco();
+    </script>    
+</body>
+</html>
