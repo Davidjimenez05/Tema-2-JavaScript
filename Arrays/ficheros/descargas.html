@@ -3,37 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descarga</title>
+    <title>Descarga PDF</title>
+    <style>
+        /* CSS para quitar el subrayado de los enlaces */
+        a {
+            text-decoration: none;
+        }
+        /* CSS para ajustar el estilo de la imagen */
+        img.cloud {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle; /* Alinea verticalmente la imagen */
+        }
+    </style>
 </head>
-<body onload="paco()">
+<body>
 
 <ul id="ul">
-
-
 </ul>
 
-    <script>
-
-     function paco(){
-        //lee el contenido de ul
+<script>
+    function paco() {
         var contenido = document.getElementById("ul");
-        var paco2= new Array();
-        
-        for (var i = 1;  i <= 20; i++){
-            
-            paco2.push("fichero"+i+".pdf");
+        var paco2 = [];
+
+        for (var i = 1; i <= 20; i++) {
+            paco2.push("fichero" + i + ".pdf");
 
             var lista = document.createElement("li");
-            var ruta = document.createElement("a"); 
-            lista.textContent="Descarga el pdf " + i;
-            ruta.setAttribute("href", paco2[i]);
+            var ruta = document.createElement("a");
+            ruta.setAttribute("href", paco2[i - 1]);
+            
+            // Crear la imagen de la nube
+            var imgNube = document.createElement("img");
+            imgNube.setAttribute("src", "download.png"); // Ruta de la imagen de la nube
+            imgNube.setAttribute("alt", "Nube"); // Texto alternativo para la imagen
+            imgNube.classList.add("cloud"); // Agregar la clase para aplicar estilos CSS
+
+            // Agregar el texto y luego la imagen al enlace
+            ruta.appendChild(document.createTextNode(" Descargar el PDF " + i + " "));
+            ruta.appendChild(imgNube);
+
             lista.appendChild(ruta);
             contenido.appendChild(lista);
-            
         }
-
     }
-    // window.onload = paco();
-    </script>    
+
+    document.addEventListener("DOMContentLoaded", paco);
+</script>    
 </body>
 </html>
