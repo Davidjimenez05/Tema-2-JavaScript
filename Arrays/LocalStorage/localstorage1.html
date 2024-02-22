@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage 1</title>
+</head>
+<body>
+    <input id="info" type="text" placeholder="Escribe algo">
+    <button onclick="guardar()">Guardar</button>
+    <button onclick="borrar()">Borre</button>
+
+    <script>
+        function cargaPagina(){
+            let valor=localStorage.getItem("Informacion")
+            if (valor!=null)
+                alert("Bienvenido "+valor); //Mira si tenemos algo guardd y nos muestra la bienvenida con un POPUP      
+        }
+        function guardar(){
+            let info = document.getElementById("info").value;
+            localStorage.setItem("Informacion",info) // para almacenar algo un SetITEM
+        }
+        function borrar(){
+            localStorage.clear() //Borrar el almacenamiento interno que hemos guardado anteriormente
+        }
+        window.onload = cargaPagina();
+    </script>
+
+</body>
+</html>
