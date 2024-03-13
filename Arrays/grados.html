@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius a Fahrenheit</title>
+</head>
+<body>
+    <h1>Calculadora de Grados Celsius a Fahrenheit</h1>
+
+    <script>
+       function transformar(){
+        var celsius = document.getElementById('grados').value;
+        var fahrenheit = celsius * 9/5 + 32;
+        document.getElementById("resultado").innerHTML = fahrenheit + "ºF";
+       }
+    </script>
+    
+    <input id="grados" type="text" placeholder="Grados Celsius">
+    <button onclick="transformar('celsius')">Transformar a fahrenheit</button>
+    <p id="resultado"></p>
+</body>
+</html> 
