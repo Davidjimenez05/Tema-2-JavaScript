@@ -1,0 +1,49 @@
+<!--Objetivo: Desarrolla una página que permita al usuario elegir entre un tema claro y
+oscuro para la página. Usa dos botones para permitir la selección del tema. Guarda
+la selección en localStorage y asegúrate de que la selección persista entre
+recargas de página.
+Especificaciones:
+● Implementa dos botones, uno para cada tema.
+● Usa localStorage para guardar el tema seleccionado por el usuario.
+● Al cargar la página, lee el tema guardado en localStorage y aplica el tema correspondiente automáticamente.
+● Proporciona feedback visual inmediato cuando se cambia el tema.-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Personalizada</title>
+</head>
+<body id="color">
+    <h1>Personalización Pagina</h1>
+    <p id="texto"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptates suscipit quidem in optio vero repellendus officia quae iure. Eaque sit assumenda, nesciunt cum praesentium voluptas saepe aliquam ex explicabo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, atque. Provident quidem ex sint sit iure, doloremque facilis similique quas voluptatem iste, sapiente dolore aut nulla at, numquam deserunt explicabo.lor Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, fugiat animi hic fuga perspiciatis quo, atque aspernatur corrupti ad delectus deserunt temporibus nihil quasi voluptate recusandae cumque a quidem quam.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae molestias illum sit officia nulla provident cum ex, harum dolor quidem laboriosam ad numquam ab tenetur esse delectus minima atque amet
+    </p>
+    <button onclick="negro()">Tema Black</button>
+    <button onclick="blanco()">Tema White</button>
+    <script>
+        function cargarPagina(){
+            let valor = localStorage.getItem("fondo");
+            if (valor === "black"){
+                document.getElementById("color").style.backgroundColor= "black"
+                document.getElementById("color").style.color= "white"
+        }
+        else {
+            document.getElementById("color").style.backgroundColor= "white"
+            document.getElementById("color").style.color= "black"
+        }
+    }
+        function negro(){
+            document.getElementById("color").style.backgroundColor= "black"
+            document.getElementById("color").style.color= "white"
+            localStorage.setItem("fondo", "black");
+        }
+        function blanco(){
+            document.getElementById("color").style.backgroundColor= "white"
+            document.getElementById("color").style.color= "black"
+            localStorage.setItem("fondo", "white")
+        };
+        window.onload = cargarPagina;
+    </script>
+</body>
+</html>

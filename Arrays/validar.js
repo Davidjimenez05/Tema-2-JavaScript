@@ -2,22 +2,21 @@ function validar(elementos){
     let estanCorrectos = true;
     for (var i=0;i<elementos.length;i++){
         document.getElementById("campo"+(i+1).toString()).innerHTML = "";        
-<<<<<<< HEAD
+
         if (elementos[i].value == "" || (i==4 && !elementos[i].checked)){
-=======
+
         if (elementos[i].value == "" || (i==6 && !elementos[i].checked)){
->>>>>>> d09257b9e720b5d1c40015fec42afe675abb4768
+
             document.getElementById("campo"+(i+1).toString()).innerHTML = "El campo " + elementos[i].id + " está vacío";
             estanCorrectos = false;
         }
         
     }
-<<<<<<< HEAD
     if (!validarEmail()){
         document.getElementById("campo3").innerHTML = "Email no válido";        
         estanCorrectos = false;
     }
-=======
+
     if (!validarEmail()){ //valido el correo
         document.getElementById("campo3").innerHTML = "Email no válido";        
         estanCorrectos = false;
@@ -30,7 +29,6 @@ function validar(elementos){
     if (!validarDNI()){
         document.getElementById("campo6").innerHTML = "DNI no valido (12345678X)"
     }
->>>>>>> d09257b9e720b5d1c40015fec42afe675abb4768
     return estanCorrectos;
 }
 /* Función validarEmail tomada de:
@@ -46,9 +44,8 @@ function validarEmail(){
         valido=false;
 	}
     return valido;
-<<<<<<< HEAD
 } 
-=======
+
 }
 function validaPasswords(){
     let clave1 = document.getElementById("password").value;
@@ -81,4 +78,4 @@ function limpia(){
 //enviar los datos al servidor cuando el formulario no estuviera correctamente relleno? 
 //Pista: revisa cómo podemos modificar el comportamiento predeterminado de un formulario 
 //(https://desarrolloweb.com/faq/explicaciones-detalladas-sobre-el-metodo-preventdefault-de-javascript).
->>>>>>> d09257b9e720b5d1c40015fec42afe675abb4768
+

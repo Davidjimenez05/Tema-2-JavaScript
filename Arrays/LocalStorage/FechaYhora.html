@@ -1,0 +1,61 @@
+<!--<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+    <p id="texto"></p>
+    <script>
+        function cargarPagina(){
+            let visitas = localStorage.getItem("visitas");
+            if (visitas!=null){
+                visitas = parseInt(visitas);
+                document.getElementById("texto").innerHTML="Has visitado esta pagina "+visitas+" veces";
+                visitas = visitas+1;
+                localStorage.setItem("visitas", visitas);
+                let now = new Date(); 
+                document.getElementById("texto").innerHTML="Te conectasce a las "+ now;
+            }
+            else{
+                document.getElementById("texto").innerHTML="Es la primera vez que entras en la pagina";
+                localStorage.setItem("visitas","1");
+            }
+        }
+        window.onload = cargarPagina();
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fecha y Hora profesor</title>
+</head>
+<body>
+    <p id="texto"></p>
+    <script>
+        function cargarPagina(){
+            var visitas = localStorage.getItem("ultimaFechaHora");
+            var hoy = new Date();
+            var ahora = hoy.toLocaleString();
+            if(visitas!=null){
+
+                // Se conecto alguna vez
+            document.getElementById("texto").innerHTML="Se conecto la ultima vez el dia"+visitas;
+            }
+            else{
+
+                // Es la primera vez que se conecta
+            document.getElementById("texto").innerHTML="Hasta ahora mismo, nunca se habia conectado";
+            }
+            localStorage.setItem("ultimaFechaHora",ahora);
+        }
+
+    window.onload = cargarPagina();
+    </script>
+</body>
+</html>
