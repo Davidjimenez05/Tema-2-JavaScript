@@ -13,28 +13,13 @@
 </head>
 <body>
     
-<<<<<<< HEAD
         <label for="">Nombre:</label><input id="nombre" type="text"><span class="error" id="campo1"></span><br>
         <label for="">Apellidos:</label><input id="apellidos" type="text"><span class="error" id="campo2"></span><br>
         <label for="">Email:</label><input id="email" type="email"><span class="error" id="campo3"></span><br>
-        <label for="">Contraseña:</label><input id="password" type="password" name="" id=""><span class="error" id="campo4"></span><br>
-        <label for="">Acepta política privacidad</label><input id="verificacion" type="checkbox" value="off"><span class="error" id="campo5"></span><br>
-=======
-        <label for="">Nombre:</label><input id="nombre" type="text"><span class="error" id="campo1"></span><br><br>
-        <label for="">Apellidos:</label><input id="apellidos" type="text"><span class="error" id="campo2"></span><br><br>
-        <label for="">Email:</label><input id="email" type="email"><span class="error" id="campo3"></span><br><br>
-        <label for="">Contraseña:</label><input id="password" type="password" name="" id=""><span class="error" id="campo4"></span><br><br>
-        <label for="">Confirma Contraseña:</label><input id="password2" type="password" name="" id=""><span class="error" id="campo5"></span><br><br>
-        <label for="">DNI:</label><input id="dni" type="text" name="" id=""><span class="error" id="campo6" id="cadena"></span><br><br>
-        <label for="">Acepta política privacidad</label><input id="verificacion" type="checkbox" value="off"><span class="error" id="campo7"></span><br><br>
->>>>>>> d09257b9e720b5d1c40015fec42afe675abb4768
+        <label for="">Contraseña:</label><input id="password1" type="password" name=""><span class="error" id="campo4"></span><br>
+        <label for="">Repite contraseña:</label><input id="password2" type="password" name=""><span class="error" id="campo5"></span><br>
+        <label for="">DNI:</label><input id="dni" type="text" onclick="ceroespacios()"><span class="error" id="campo6"></span><br>
+        <label for="">Acepta política privacidad</label><input id="verificacion" type="checkbox" value="off"><span class="error" id="campo7"></span><br>
         <button onclick="validar(document.getElementsByTagName('input'))">Validar</button>
 </body>
 </html>
-<!--Un segundo campo de contraseña(¡que debe coincidir con el primero y tener longitud mínima de 8 caracteres!).
-Un campo DNI (que debe cumplir con los criterios para obtener 
-la letra del ejercicio planteado al final del documento javascript2.pdf).
-¿Serías capaz de utilizar la etiqueta <form> ... </form> y que se vieran los mensajes sin enviar 
-los datos al servidor cuando el formulario no estuviera correctamente relleno? Pista: 
-revisa cómo podemos modificar el comportamiento predeterminado de un formulario 
-(https://desarrolloweb.com/faq/explicaciones-detalladas-sobre-el-metodo-preventdefault-de-javascript). -->
